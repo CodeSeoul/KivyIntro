@@ -1,5 +1,7 @@
 # KivyIntro
-This is a brief introductory program to Kivy, as Python UI library that deploys to Windows, OS X, Linux, iOS, and Android
+This is a brief introductory program to Kivy, as Python UI library that deploys to Windows, OS X, Linux, iOS, and Android.
+
+This tiny program creates a text input and sets a label's value to the text when a button is pressed.
 
 ## Setup
 1. Install Python 3: https://www.python.org/downloads/

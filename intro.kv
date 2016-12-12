@@ -1,17 +1,25 @@
+# This is how we can define the view properties for our main widget, MainPage
 <MainPage>:
 
+    # Within our MainPage, we create a Label widet
     Label:
-        id: header
+        # We can define various properties here
+        # See https://kivy.org/docs/api-kivy.uix.label.html#kivy.uix.label.Label for more
         text: 'Hello World!'
         font_size: '36sp'
+        # We're setting the horizontal center of this label to the MainPage's center
         center_x: root.width/2
-        center_y: root.height - self.height/2
+        # We're setting the height so that the Label's top is at the MainPage's top
+        top: root.height
 
+    # Here's our TextInput
     TextInput:
+        # The id allows us to specifically reference THIS TextInput, in case we had others
         id: text_input
+        # More positioning and sizing math
         width: root.width - root.width/10
         center_x: root.width/2
-        center_y: root.height* 2/3
+        center_y: root.height * 2/3
 
     Label:
         id: output_label
@@ -20,7 +28,10 @@
         text: "No text given yet"
         font_size: '20sp'
 
+    # We're creating an UpdateButton class within our MainPage
     UpdateButton:
+        # Remember those ObjectProperties we set to None earlier?
+        # Here, we assign them to the text input and label as appropriate
         text_input: text_input
         output_label: output_label
         text: "Update text"
