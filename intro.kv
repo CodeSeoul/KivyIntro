@@ -1,0 +1,29 @@
+<MainPage>:
+
+    Label:
+        id: header
+        text: 'Hello World!'
+        font_size: '36sp'
+        center_x: root.width/2
+        center_y: root.height - self.height/2
+
+    TextInput:
+        id: text_input
+        width: root.width - root.width/10
+        center_x: root.width/2
+        center_y: root.height* 2/3
+
+    Label:
+        id: output_label
+        center_x: root.width/2
+        center_y: self.height + 3
+        text: "No text given yet"
+        font_size: '20sp'
+
+    UpdateButton:
+        text_input: text_input
+        output_label: output_label
+        text: "Update text"
+        center_x: self.parent.width/2
+        center_y: self.parent.height/3
+
